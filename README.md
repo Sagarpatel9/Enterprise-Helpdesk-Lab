@@ -6,7 +6,7 @@ This project is a hands-on simulation of a small enterprise IT Help Desk environ
 
 I built this lab to better understand how real IT support teams operate — from ticket intake to escalation and final resolution. The environment includes an Ubuntu Server running osTicket and a Windows workstation VM where I performed real troubleshooting tasks.
 
-The goal of this project was not just to “fix issues,” but to follow proper workflow, documentation, and escalation procedures similar to what would happen in a real organization.
+The goal of this project was not just to “fix issues,” but to follow structured workflow, documentation, and escalation procedures similar to what would happen in a real organization.
 
 ---
 
@@ -22,41 +22,41 @@ The goal of this project was not just to “fix issues,” but to follow proper 
 
 ---
 
-## What This Lab Demonstrates
+## Repository Structure
 
-This project focuses on practical IT support skills, including:
-
-- Handling ticket intake and documentation
-- Performing layered troubleshooting
-- Distinguishing between network connectivity and DNS issues
-- Resetting user accounts using the Windows CLI
-- Escalating tickets between support tiers
-- Validating fixes before closing tickets
-- Communicating clearly in ticket responses
+- `01-Lab-Architecture/` – Environment design and workflow overview  
+- `02-Case-1-New-Employee-Onboarding/` – Account creation workflow  
+- `03-Case-2-Password-Reset/` – Password reset procedure  
+- `04-Case-3-Account-Investigation/` – Authentication investigation & escalation  
+- `05-Case-4-DNS-Misconfiguration/` – Network troubleshooting case  
+- `06-Lessons-Learned/` – Professional skills and reflections  
 
 ---
 
 ## Simulated Incident Cases
 
-### Case 1 – Password Reset
-Simulated a common login issue where a user forgot their password. Followed identity verification steps and reset credentials using the `net user` command.
+### Case 1 – New Employee Onboarding
+Simulated an HR request to provision a workstation account for a new employee. Created the account using the Windows CLI, assigned appropriate group membership, validated the configuration, and documented the full ticket lifecycle.
 
-### Case 2 – Account Access Investigation
-Investigated repeated login failures before resetting credentials. Demonstrated escalation workflow and documentation discipline.
+### Case 2 – Password Reset
+Handled a common login issue where a user forgot their password. Followed identity verification steps and reset credentials using the `net user` command before resolving the ticket.
 
-### Case 3 – DNS Misconfiguration
-User could reach external IP addresses but could not load websites. Diagnosed DNS misconfiguration using `ipconfig`, `ping`, and `nslookup`, escalated to the Network Team, corrected DNS settings, and validated the fix.
+### Case 3 – Account Investigation
+Investigated repeated authentication failures before resetting credentials. Escalated the ticket to Tier 2 for log review, documented findings, and followed structured workflow before resolution.
+
+### Case 4 – DNS Misconfiguration
+User could reach external IP addresses but could not load websites. Diagnosed DNS misconfiguration using `ipconfig`, `ping`, and `nslookup`, escalated to the Network Team, corrected DNS settings, validated the fix, and closed the ticket.
 
 ---
 
-## Skills Developed
+## Skills Demonstrated
 
-- IT Service Management (ITSM) workflow
-- Tier 1 and Tier 2 escalation process
-- Windows user administration via command line
-- Network troubleshooting methodology (OSI-layer thinking)
-- Clear technical documentation
-- Professional ticket communication
+- IT Service Management (ITSM) ticket lifecycle handling  
+- Tier 1 and Tier 2 escalation workflow  
+- Windows user administration via command line  
+- Structured network troubleshooting methodology  
+- Root cause identification and validation testing  
+- Clear and professional technical documentation  
 
 ---
 
@@ -69,4 +69,4 @@ This project reflects how I approach problem-solving: methodical, documented, an
 ---
 
 **Author:**  
-Sagarkumar Patel  
+Sagarkumar Patel
