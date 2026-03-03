@@ -1,50 +1,60 @@
-# Case 2 – Account Access Investigation
+# Case 2 – Password Reset Workflow
 
 ## Scenario
 
-The user reported repeated authentication failures and was unable to log in. Instead of immediately resetting the password, I treated this as a potential security-related issue.
+The user (Sarah) reported that she was unable to log into her Windows workstation after forgetting her password.
 
-In real environments, multiple failed login attempts can sometimes indicate user error — but they can also suggest possible unauthorized access attempts.
-
----
-
-## Initial Triage (Tier 1)
-
-After reviewing the ticket, I documented the issue and avoided immediately resetting the password.
-
-Instead, I escalated the ticket to the Network Team (Tier 2) to review login activity before taking action.
-
-This reflects proper escalation practice rather than assuming every issue is simply a forgotten password.
+This is one of the most common help desk requests in real environments, so I used this case to simulate a realistic Tier 1 support workflow.
 
 ---
 
-## Investigation (Tier 2)
+## Ticket Intake
 
-The Network Team reviewed the system logs to look for patterns such as:
+Sarah submitted a ticket through the osTicket portal explaining that she could not log in.
 
-- Multiple failed login attempts
-- Suspicious timing patterns
-- Unusual behavior that might indicate brute-force attempts
-
-After reviewing the logs, no signs of malicious activity were found. The failed attempts appeared consistent with normal user error.
-
-The findings were documented internally.
+As the assigned IT technician, I reviewed the ticket and added an internal note documenting the issue before taking any action. Maintaining documentation at every stage is important for accountability and audit purposes.
 
 ---
 
-## Resolution
+## Identity Verification
 
-Once the investigation cleared the account as safe:
+Before resetting the password, I documented that the user's identity was verified.
 
-- The ticket was reassigned back to IT Support.
-- The password was reset using the Windows CLI.
-- The user was instructed to change the temporary password upon login.
+In a real organization, this step could involve:
+- Confirming employee ID
+- Verifying department information
+- Performing a callback verification
+
+Even in a lab environment, I included this step to reflect proper security practice.
 
 ---
 
-## Lessons from This Case
+## Technical Resolution
 
-- Not all login issues should be treated as routine resets.
-- Escalation is important when security concerns are possible.
-- Clear internal documentation helps teams collaborate effectively.
-- Even minor incidents can demonstrate structured response workflow.
+After verification, I logged into the Windows system using an administrative account and reset the password using the command line:
+
+```net user sarah.johnson NewTemporaryPass123!```
+
+The system confirmed:
+"The command completed successfully."
+
+This method is commonly used by help desk technicians for local account password resets.
+
+---
+
+## Validation
+
+After resetting the password:
+- The user was able to log in successfully.
+- I documented the resolution in the ticket.
+- The ticket status was changed to **Resolved**.
+
+---
+
+## Key Takeaways
+
+- Password resets should always include identity verification.
+- Command-line administration is often faster and more efficient than GUI tools.
+- Proper documentation strengthens accountability.
+- Even simple issues should follow structured workflow.
+
