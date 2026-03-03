@@ -51,10 +51,9 @@ This was not a valid resolver in the environment.
 
 ## Resolution
 
-The DNS settings were corrected to:
+The DNS settings were corrected to configure automatic
 
-- 8.8.8.8
-- 8.8.4.4
+
 
 After updating the configuration, I validated the fix using:
 
@@ -72,4 +71,5 @@ Both commands returned successful results, confirming that DNS resolution and ho
 - Successful IP connectivity does not guarantee DNS functionality.
 - Escalation to Tier 2 is appropriate when configuration-level issues are identified.
 - Validation testing is critical before closing a ticket.
+
 
